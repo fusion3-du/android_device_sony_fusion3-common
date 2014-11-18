@@ -162,6 +162,9 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 TW_NO_SCREEN_BLANK := true
 
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
