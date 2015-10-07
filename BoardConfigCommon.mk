@@ -43,7 +43,7 @@ MALLOC_SVELTE := true
 BOARD_KERNEL_BASE     := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE  := kernel/sony/apq8064
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 
 # Change 'BOARD_ENABLE_SERIAL_CONSOLE' to 'true' to enable serial console
 BOARD_ENABLE_SERIAL_CONSOLE := false
