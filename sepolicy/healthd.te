@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 allow healthd alarm_device:chr_file rw_file_perms;
 allow healthd device:dir rw_dir_perms;
+=======
+allow healthd device:dir r_dir_perms;
+>>>>>>> 81866ab... fusion3: Implement the healthd offline charger
 allow healthd rtc_device:chr_file rw_file_perms;
