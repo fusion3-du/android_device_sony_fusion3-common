@@ -99,6 +99,9 @@ HEALTHD_ENABLE_TRICOLOR_LED := true
 RED_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-red/brightness
 GREEN_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-green/brightness
 BLUE_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-blue/brightness
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.fusion3
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/sony/fusion3-common/charger/images
 
 # Lights HAL
 TARGET_PROVIDES_LIBLIGHT := true
