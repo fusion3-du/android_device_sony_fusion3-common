@@ -1,3 +1,17 @@
-allow init self:process execmem;
+allow init self:process { setcurrent execmem };
 
 allow init wpa_socket:unix_dgram_socket { bind create };
+
+allow init kernel:file rw_file_perms;
+
+allow init rootfs:file execute_no_trans;
+
+allow init wcnss_device:chr_file rw_file_perms;
+
+allow init tad_socket:sock_file rw_file_perms;
+
+allow init property_socket:sock_file rw_file_perms;
+
+allow init tad:unix_stream_socket connectto;
+
+allow init app_data_file:dir { create rw_dir_perms };
