@@ -1,0 +1,7 @@
+allow toolbox init:unix_stream_socket { read write connectto };
+allow toolbox init:fifo_file { write read getattr };
+allow toolbox block_device:blk_file ioctl;
+allow toolbox kernel:process setsched;
+allow toolbox property_socket:sock_file write;
+allow toolbox self:capability { dac_override chown fowner fsetid };
+allow toolbox efs_boot_dev:blk_file { getattr setattr };

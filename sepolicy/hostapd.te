@@ -1,0 +1,2 @@
+allow hostapd rfkill_device:chr_file read;
+allow hostapd wifi_data_file:sock_file write;
