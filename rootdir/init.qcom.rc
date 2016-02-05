@@ -256,9 +256,6 @@ on post-fs-data
 
     rm /data/local/tmp/adreno_config.txt
 
-    # communicate with mpdecision and thermald
-    mkdir /dev/socket/mpdecision 2770 root system
-
     # Kgsl governors
     chown root system /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/policy
     chmod 0664 /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/policy
@@ -416,12 +413,6 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     class main
     user root
     group root
-
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    class main
-    user root
-    group root system
-    disabled
 
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     class late_start
