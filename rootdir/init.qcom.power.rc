@@ -47,7 +47,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 384000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 384000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 384000
-    start mpdecision
 
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/policy "msm"
 
