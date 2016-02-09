@@ -15,3 +15,9 @@ allow init property_socket:sock_file rw_file_perms;
 allow init tad:unix_stream_socket connectto;
 
 allow init app_data_file:dir { create rw_dir_perms };
+
+allow init sysfs_lowmemorykiller:file { getattr setattr rw_file_perms };
+
+allow init sysfs_touchpanel:file { getattr setattr rw_file_perms };
+
+allow init proc_dirty_ratio:file { getattr setattr rw_file_perms };
