@@ -14,7 +14,7 @@ allow init property_socket:sock_file rw_file_perms;
 
 allow init tad:unix_stream_socket connectto;
 
-allow init app_data_file:dir { create rw_dir_perms };
+allow init app_data_file:dir { create setattr rw_dir_perms };
 
 allow init sysfs_lowmemorykiller:file { getattr setattr rw_file_perms };
 
@@ -31,3 +31,11 @@ allow init untrusted_app_devpts:chr_file { getattr setattr rw_file_perms ioctl }
 allow init logd:process signal;
 
 allow init kernel:system syslog_read;
+
+allow init app_data_file:file { getattr setattr create write read open };
+
+allow init self:capability sys_ptrace;
+
+allow init fuse:dir write;
+
+allow init qti_init_shell:process signull;
