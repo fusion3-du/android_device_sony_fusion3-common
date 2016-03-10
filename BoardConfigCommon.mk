@@ -89,11 +89,14 @@ HAVE_ADRENO_SOURCE := false
 
 # Healthd
 BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+HEALTHD_FORCE_BACKLIGHT_CONTROL := true
+HEALTHD_ENABLE_TRICOLOR_LED := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.fusion3
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/sony/fusion3-common/charger/images
-RED_LED_PATH := /sys/class/leds/lm3533-red/brightness
-GREEN_LED_PATH := /sys/class/leds/lm3533-green/brightness
-BLUE_LED_PATH := /sys/class/leds/lm3533-blue/brightness
+RED_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-red/brightness
+GREEN_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-green/brightness
+BLUE_LED_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-blue/brightness
 
 # Lights HAL
 TARGET_PROVIDES_LIBLIGHT := true
@@ -132,6 +135,10 @@ EXTENDED_FONT_FOOTPRINT := true
 # Recovery
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/fusion3-common/boot/custombootimg.mk
 TARGET_RECOVERY_FSTAB := device/sony/fusion3-common/rootdir/fstab.qcom
+BOARD_RECOVERY_SWIPE := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+TARGET_NO_SEPARATE_RECOVERY := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
@@ -141,7 +148,7 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # TWRP
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
+# RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_FLASH_FROM_STORAGE := true
@@ -149,7 +156,8 @@ TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
 #TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_JB_CRYPTO := true
+TW_INCLUDE_JB_CRYPTO := false
+TW_INCLUDE_L_CRYPTO := true
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/msm_sdcc.1/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"
