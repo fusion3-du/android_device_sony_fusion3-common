@@ -133,6 +133,7 @@
 
 # System ALS
 /dev/input/event8        0660   system     camera
+/dev/input/event10       0660   media      input
 
 # LM3533 ALS
 /sys/devices/i2c-0/0-0036 als_enable 0600 system system
