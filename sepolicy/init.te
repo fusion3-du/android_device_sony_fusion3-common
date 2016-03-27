@@ -39,3 +39,5 @@ allow init self:capability sys_ptrace;
 allow init fuse:dir write;
 
 allow init qti_init_shell:process signull;
+
+allow init trim_area_partition_device:blk_file { write };
