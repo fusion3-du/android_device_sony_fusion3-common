@@ -40,7 +40,7 @@ BOARD_LIB_DUMPSTATE := libdumpstate.sony
 TARGET_LDPRELOAD += libshim_utils.so
 
 # Bionic
-# MALLOC_IMPL := dlmalloc
+MALLOC_IMPL := dlmalloc
 
 # Kernel information
 BOARD_KERNEL_BASE     := 0x80200000
