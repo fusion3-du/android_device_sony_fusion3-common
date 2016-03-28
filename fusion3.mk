@@ -48,7 +48,8 @@ PRODUCT_PACKAGES += \
     camera.qcom \
     libshim_camera \
     libshim_cald \
-    libshim_utils
+    libshim_utils \
+    SnapdragonCamera
 
 # Display
 PRODUCT_PACKAGES += \
