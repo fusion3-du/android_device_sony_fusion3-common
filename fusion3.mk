@@ -196,6 +196,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(COMMON_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.msm8960
+
 # Off mode charger
 PRODUCT_PACKAGES += \
     charger_res_images
