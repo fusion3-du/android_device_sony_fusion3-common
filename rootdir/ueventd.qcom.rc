@@ -98,6 +98,14 @@
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
 
+# native sensors
+/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
+/sys/devices/i2c-12/12-*  enable      0664 system system
+/sys/devices/i2c-12/12-*  poll_delay  0664 system system
+
+# Sensors
+/dev/iio:device*          0660   system     input
+
 # MHL
 /sys/devices/i2c-0/0-0039/mhl/sii8334  adopter_id              0440 system system
 /sys/devices/i2c-0/0-0039/mhl/sii8334  device_id               0440 system system
@@ -118,12 +126,6 @@
 /sys/devices/virtual/graphics/fb1   vendor_name         0640 system system
 /sys/devices/virtual/graphics/fb1   video_mode          0640 system system
 /sys/devices/virtual/graphics/fb1   video_mode_str      0440 system system
-
-/sys/devices/virtual/input/input*   bma250_calib_eeprom 0220 system system
-/sys/devices/virtual/input/input*   bma250_calib_image  0660 system system
-/sys/devices/virtual/input/input*   bma250_calib_offset 0440 system system
-/sys/devices/virtual/input/input*   bma250_calib_set    0220 system system
-/sys/devices/virtual/input/input*   bma250_rate 0640  system   system
 
 /sys/devices/virtual/input/input*   interval    0640  system   system
 /sys/devices/virtual/input/input*   registers   0640  system   system
