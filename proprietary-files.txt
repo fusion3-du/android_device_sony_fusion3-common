@@ -127,7 +127,6 @@ lib/libqmiservices.so
 lib/libqmi.so
 lib/libQSEEComAPI.so
 lib/libril-qc-qmi-1.so
-lib/libsensors_akm8963.so
 lib/libsys-utils.so
 lib/libta.so
 vendor/camera/KMO08BN0_IMX111.dat
