@@ -36,6 +36,7 @@ on init
     write /sys/module/subsystem_restart/parameters/restart_level 3
     write /sys/module/subsystem_restart/parameters/max_restarts 8
     write /sys/module/subsystem_restart/parameters/max_history_time 3600
+    write /sys/devices/virtual/input/clearpad/wakeup_gesture 0
 
 on fs
     mount_all ./fstab.qcom
