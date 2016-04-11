@@ -1,2 +1,4 @@
 allow shell dalvikcache_data_file:file { create unlink rw_file_perms };
 allow shell dalvikcache_data_file:dir { add_name remove_name write };
+allow shell init_exec:file getattr;
+allow shell unlabeled:dir getattr;
