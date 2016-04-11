@@ -14,6 +14,8 @@ allow mediaserver sensorservice_service:service_manager find;
 # /dev/input
 allow mediaserver input_device:dir search;
 
+allow mediaserver storage_file:dir search;
+
 # ALS
 allow mediaserver input_device:chr_file r_file_perms;
 unix_socket_connect(mediaserver, illumination, illumination)
