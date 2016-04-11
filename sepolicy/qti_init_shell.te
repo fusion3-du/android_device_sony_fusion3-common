@@ -5,7 +5,11 @@ allow qti_init_shell efs_boot_dev:blk_file setattr;
 allow qti_init_shell radio_prop:property_service set;
 
 allow qti_init_shell block_device:dir { getattr search };
-allow qti_init_shell block_device:blk_file { getattr setattr };
+allow qti_init_shell block_device:blk_file { r_file_perms getattr setattr };
+allow qti_init_shell system_file:{ file dir } setattr;
+allow qti_init_shell labeledfs:filesystem remount;
+allow qti_init_shell self:capability sys_admin;
+allow qti_init_shell kernel:process setsched;
 allow qti_init_shell modem_efs_partition_device:blk_file { getattr setattr };
 allow qti_init_shell bluetooth_data_file:file read;
 allow qti_init_shell init:fifo_file { getattr read write ioctl };
