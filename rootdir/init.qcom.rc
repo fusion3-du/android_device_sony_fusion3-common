@@ -201,18 +201,9 @@ on post-fs-data
     mkdir /cache/qcks 0770 system system
     start taimport
 
-    restorecon /data/etc/bluetooth_bdaddr
-    restorecon /data/etc/wlan_macaddr0
-    restorecon /data/etc/wlan_macaddr1
-    restorecon /data/etc/wlan_macaddr2
-    restorecon /data/etc/wlan_macaddr3
-    restorecon /data/misc/audio/mbhc.bin
-    restorecon /data/misc/audio/wcd9310_anc.bin
-    restorecon /cache/qcks/acdb.bin
-    restorecon /cache/qcks/efs1.bin
-    restorecon /cache/qcks/efs2.bin
-    restorecon /cache/qcks/efs3.bin
-    restorecon /cache/qcks/ta.bin
+    restorecon -R /data/etc
+    restorecon -R /data/misc
+    restorecon -R /cache/qcks
 
     # Update WIFI MAC address
     mkdir /data/misc/wifi/prima 0775 wifi wifi
