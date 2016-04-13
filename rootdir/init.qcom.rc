@@ -198,8 +198,7 @@ on post-fs-data
     mkdir /data/etc 0755 root shell
     mkdir /data/audio 0770 media audio
     mkdir /cache/qcks 0770 system system
-
-    exec /system/bin/taimport
+    start taimport
 
     restorecon /data/etc/bluetooth_bdaddr
     restorecon /data/etc/wlan_macaddr0
@@ -433,3 +432,10 @@ service illumination /system/bin/illumination_service
 service charger /sbin/healthd -c
     class charger
     seclabel u:r:healthd:s0
+
+# SONY: TAImport
+service taimport /system/bin/taimport
+    class main
+    user root
+    disabled
+    oneshot
