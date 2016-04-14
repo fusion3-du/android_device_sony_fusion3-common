@@ -16,6 +16,9 @@ allow mediaserver input_device:dir search;
 
 allow mediaserver storage_file:dir search;
 
+# taimport
+allow mediaserver ta_data_file:dir search;
+
 # ALS
 allow mediaserver input_device:chr_file r_file_perms;
 unix_socket_connect(mediaserver, illumination, illumination)
