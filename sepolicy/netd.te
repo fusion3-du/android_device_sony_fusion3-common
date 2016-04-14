@@ -1,0 +1,2 @@
+#taimport
+allow netd ta_data_file:dir search;
