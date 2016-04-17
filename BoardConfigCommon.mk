@@ -52,7 +52,7 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-ea
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
  # Target Toolchain
-TARGET_GCC_VERSION_EXP := 4.9-uber
+TARGET_GCC_VERSION_EXP := 5.3-uber
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
