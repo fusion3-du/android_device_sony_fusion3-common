@@ -201,9 +201,9 @@ on post-fs-data
     mkdir /cache/qcks 0770 system system
     start taimport
 
-    restorecon -R /data/etc
-    restorecon -R /data/misc
-    restorecon -R /cache/qcks
+    restorecon_recursive /data/etc
+    restorecon_recursive /data/misc
+    restorecon_recursive /cache/qcks
 
     # Update WIFI MAC address
     mkdir /data/misc/wifi/prima 0775 wifi wifi
