@@ -271,10 +271,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# I/O scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
-
 # Touchscreen
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.noresample=1
@@ -294,6 +290,10 @@ PRODUCT_COPY_FILES += \
 # Audio policy change for Viper
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/su.d/40audiopolicy.sh:system/su.d/40audiopolicy.sh
+
+# Set read-ahead size
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/set_read_ahead.sh:system/etc/set_read_ahead.sh
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)
