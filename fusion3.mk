@@ -302,7 +302,7 @@ PRODUCT_COPY_FILES += \
 
 # Set read-ahead size
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/set_read_ahead.sh:system/etc/set_read_ahead.sh
+    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values.sh:system/etc/set_custom_sysfs_values.sh
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)

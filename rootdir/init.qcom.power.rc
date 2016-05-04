@@ -1,5 +1,5 @@
 on early-init
-    exec /system/bin/sh /system/etc/set_read_ahead.sh
+    exec /system/bin/sh /system/etc/set_custom_sysfs_values.sh
 
 on enable-low-power
     # Enable Power modes and set the CPU Freq Sampling rates
@@ -54,8 +54,8 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1512000
 
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor "simple"
-    write /sys/module/msm_kgsl_core/parameters/simple_laziness "4"
-    write /sys/module/msm_kgsl_core/parameters/simple_ramp_threshold "4000"
+    write /sys/module/msm_kgsl_core/parameters/simple_laziness "0"
+    write /sys/module/msm_kgsl_core/parameters/simple_ramp_threshold "6000"
 
 on charger
     # Enable Power modes and set the CPU Freq Sampling rates
