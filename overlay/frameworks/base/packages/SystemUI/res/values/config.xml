@@ -13,9 +13,8 @@
 
 <resources>
 
-    <!-- The default tiles to display in QuickSettings -->
     <string name="quick_settings_tiles_default" translatable="false">
-        wifi,bt,inversion,dnd,cell,airplane,rotation,flashlight,location,cast,hotspot,usb_tether,screenshot,nfc,sync,screenoff,timeout,brightness,music,reboot,battery_saver,expanded_desktop
-    </string>
+adb_network,airplane,battery_saver,bt,brightness,cast,pulse,caffeine,cell,dnd,expanded_desktop,flashlight,headsup,hotspot,ime,inversion,kernel,kill_app,location,music,navigation_bar,nfc,reboot,rotation,screenoff,screenshot,sound,sync,themes,timeout,usb_tether,wifi
 
+    </string>
 </resources>
