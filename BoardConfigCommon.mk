@@ -169,9 +169,6 @@ TW_NO_SCREEN_BLANK := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
-#LIBPERFLOCK
-LIBPERFLOCK := org.codeaurora.Performance
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
