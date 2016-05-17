@@ -54,7 +54,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1512000
 
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor "simple"
-    write /sys/module/msm_kgsl_core/parameters/simple_laziness "0"
+    write /sys/module/msm_kgsl_core/parameters/simple_laziness "1"
     write /sys/module/msm_kgsl_core/parameters/simple_ramp_threshold "6000"
 
 on charger
