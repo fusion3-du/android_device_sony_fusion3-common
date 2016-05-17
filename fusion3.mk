@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.google.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
+# Sony permissions
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/permissions/com.sony.device.xml:system/etc/permissions/com.sony.device.xml
+
 # Camera app
 PRODUCT_PACKAGES += \
     Snap
