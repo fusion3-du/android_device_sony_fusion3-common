@@ -304,9 +304,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/su.d/40audiopolicy.sh:system/su.d/40audiopolicy.sh
 
-# Set read-ahead size
+# Set sysfs values
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values.sh:system/etc/set_custom_sysfs_values.sh
+    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values.sh:system/etc/set_custom_sysfs_values.sh \
+    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values_boot.sh:system/etc/set_custom_sysfs_values_boot.sh
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)

@@ -85,6 +85,7 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
 
 on boot
+    exec /system/bin/sh /system/etc/set_custom_sysfs_values_boot.sh
     trigger enable-low-power
 
 on property:init.svc.recovery=running
