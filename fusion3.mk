@@ -47,9 +47,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/permissions/com.sony.device.xml:system/etc/permissions/com.sony.device.xml
 
-# Camera app
+# Catlog Error fixes
 PRODUCT_PACKAGES += \
-    Snap
+    org.apache.http.legacy
 
 # Camera wrapper
 PRODUCT_PACKAGES += \
@@ -257,7 +257,7 @@ PRODUCT_COPY_FILES += \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \

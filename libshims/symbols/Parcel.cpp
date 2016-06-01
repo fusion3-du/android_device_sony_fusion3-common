@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-#ifndef DEVICE_PERMS_H
-#define DEVICE_PERMS_H
+#include <stdint.h>
+#include <utils/Errors.h>
 
-#define PROPERTY_PERMS_APPEND \
-    { "camera.",          AID_MEDIA,    0 },
+namespace android
+{
+    /* status_t Parcel::writeString16 */
+    extern "C" status_t _ZN7android6Parcel13writeString16EPKDsj(const char16_t* str, size_t len);
 
-#endif /* DEVICE_PERMS_H */
-
+    extern "C" status_t _ZN7android6Parcel13writeString16EPKtj(const char16_t* str, size_t len)
+    {
+        return _ZN7android6Parcel13writeString16EPKDsj(str, len);
+    }
+};
