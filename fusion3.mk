@@ -24,6 +24,7 @@ endif
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
@@ -46,6 +47,15 @@ PRODUCT_COPY_FILES += \
 # Sony permissions
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/permissions/com.sony.device.xml:system/etc/permissions/com.sony.device.xml
+
+# QCom emergency call feature for RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.custom_ecc=1
+
+# Enable Embms time sync feature by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.sib16_support=1
 
 
 # Camera wrapper
