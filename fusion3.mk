@@ -47,9 +47,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/permissions/com.sony.device.xml:system/etc/permissions/com.sony.device.xml
 
-# Catlog Error fixes
-PRODUCT_PACKAGES += \
-    org.apache.http.legacy
 
 # Camera wrapper
 PRODUCT_PACKAGES += \
@@ -258,6 +255,17 @@ PRODUCT_COPY_FILES += \
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
+
+# Add missing props from stock rom
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.sys.umsdirtyratio=5
+    drm.service.enabled=true
+    camera2.portability.force_api=1
+    ro.adb.secure=1
+    ro.semc.version.sw=1269-5309
+    ro.semc.version.sw_revision=10.7.A.0.228
+    ro.semc.version.sw_variant=GENERIC
+    ro.semc.version.sw_type=user
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
