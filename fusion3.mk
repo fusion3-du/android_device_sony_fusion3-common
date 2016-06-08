@@ -222,6 +222,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     thermanager
 
+# Sony OSS timekeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # WIFI MAC update
 PRODUCT_PACKAGES += \
     mac-update
