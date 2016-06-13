@@ -55,7 +55,7 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
  # Kernel Toolchain
 TARGET_GCC_VERSION_ARM := 5.x
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.3/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.x/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
  # Target Toolchain
