@@ -133,7 +133,7 @@
          dozing).  This should be enabled if you have such services and expect apps to
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_enableAutoPowerModes">false</bool>
 
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
