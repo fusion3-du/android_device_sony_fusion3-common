@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_cald
 
+# Snap Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Display
 PRODUCT_PACKAGES += \
     libgenlock \
