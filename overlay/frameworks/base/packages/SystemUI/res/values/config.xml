@@ -17,4 +17,8 @@
 <string name="quick_settings_tiles_default" translatable="false">
         wifi,bt,inversion,dnd,cell,airplane,rotation,flashlight,location,cast,hotspot,usb_tether,screenshot,nfc,sync,screenoff,timeout,brightness,music,reboot,battery_saver,expanded_desktop,adb_network,compass,themes,navigation_bar,ime,caffeine,volume_panel
     </string>
+
+    <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
+    <bool name="config_show4GForLTE">true</bool>
+
 </resources>
