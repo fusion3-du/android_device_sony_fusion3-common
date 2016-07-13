@@ -333,8 +333,7 @@ PRODUCT_COPY_FILES += \
 
 # Set sysfs values
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values.sh:system/etc/set_custom_sysfs_values.sh \
-    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values_boot.sh:system/etc/set_custom_sysfs_values_boot.sh
+    $(COMMON_PATH)/rootdir/system/etc/set_custom_sysfs_values.sh:system/etc/set_custom_sysfs_values.sh
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)
