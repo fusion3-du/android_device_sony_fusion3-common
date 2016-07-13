@@ -1,6 +1,3 @@
-on early-init
-    exec /system/bin/sh /system/etc/set_custom_sysfs_values.sh
-
 on enable-low-power
     # Enable Power modes and set the CPU Freq Sampling rates
     write /sys/module/rpm_resources/enable_low_power/L2_cache 1
@@ -85,7 +82,7 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
 
 on boot
-    exec /system/bin/sh /system/etc/set_custom_sysfs_values_boot.sh
+    exec /system/bin/sh /system/etc/set_custom_sysfs_values.sh
     trigger enable-low-power
 
 on property:init.svc.recovery=running
