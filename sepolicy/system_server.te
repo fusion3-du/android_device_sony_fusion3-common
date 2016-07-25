@@ -23,3 +23,5 @@ allow system_server logd:dir search;
 allow system_server logd:file { read getattr open };
 
 allow system_server storage_stub_file:dir getattr;
+
+allow system_server self:unix_stream_socket { getattr read write ioctl };
