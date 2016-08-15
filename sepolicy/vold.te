@@ -1,0 +1,2 @@
+allow vold logd:lnk_file getattr;
+allow vold logd:dir getattr;

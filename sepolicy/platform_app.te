@@ -2,3 +2,5 @@
 allow platform_app battery_service:service_manager find;
 allow platform_app healthd_service:service_manager find;
 allow platform_app nfc_service:service_manager find;
+allow platform_app { init shell kernel untrusted_app ueventd tad vold healthd lmkd servicemanager surfaceflinger tee sysinit qmuxd system_app netmgrd netd debuggerd rild mediaserver drmserver installd keystore thermanager illumination ta_qmi_client zygote gatekeeperd perfprofd adbd mdm_helper system_server sdcardd wpa nfc radio isolated_app }:dir search;
+allow platform_app { init shell kernel untrusted_app ueventd tad vold healthd lmkd servicemanager surfaceflinger tee sysinit qmuxd system_app netmgrd netd debuggerd rild mediaserver drmserver installd keystore thermanager illumination ta_qmi_client zygote gatekeeperd perfprofd adbd mdm_helper system_server sdcardd wpa nfc radio isolated_app }:file { read open getattr };

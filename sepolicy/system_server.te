@@ -19,7 +19,7 @@ allow system_server qti_init_shell:binder call;
 allow system_server sysfs_usb_supply:dir search;
 allow system_server sysfs_usb_supply:file r_file_perms;
 
-allow system_server logd:dir search;
+allow system_server logd:dir { search read };
 allow system_server logd:file { read getattr open };
 
 allow system_server storage_stub_file:dir getattr;
